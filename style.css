@@ -251,6 +251,19 @@
 
     --transition-duration: 0.2s;
  }
+ a{
+  color: var(--color-light);
+ } 
+ a:hover{
+  color: var(--color-light-gray);
+ }
+ a,button,input, textarea,svg *{
+  transition-duration: var(--transition-duration);
+ }
+ button{
+  white-space: nowrap;
+ }
+
  body{
     background-color: var(--color-dark);
     font-family: var(--font-family-base);
@@ -270,4 +283,107 @@
     font-weight: 700;
     text-transform: uppercase;
  }
+ .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 32px;
+  margin-right: 32px;
+  column-gap: 20px;
+ }
+ .header-logo{
+  width: 135px;
+  height: 25px;
+  flex-shrink: 0;
+ }
+ .header-menu{
+  width: 484px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
  
+ }
+ 
+ .header-menu-list{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;  
+ }
+ 
+ .header-menu-link{
+  display: inline-flex;
+  height: 90px;
+  align-items: center;
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  
+  text-decoration: none;
+ }
+ .header-book-button{
+    display: flex;
+  padding: 7px 26.734px 7px 26px;
+  align-items: flex-start;
+  border-radius: 30px;
+  border: var(--border);
+  background: #FFF;
+
+  
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 200% */
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+ }
+ .header-book-button:hover{
+  background-color: var(--color-light-gray);
+ }
+ 
+ .header-actions{
+      display: inline-flex;
+    padding: 23.5px 6px 26px 0px;
+    align-items: flex-end;
+    border: none;
+    gap: 39px;
+ }
+ .header-burger-button{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5px;
+  padding-left: 9px;
+  color: var(--color-light);
+
+  width: 40px;
+  height: 40px;
+  
+  background-color: transparent;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  
+ }
+ .header-burger-button-line{  
+  width: 6px;
+  height: 1px;
+  background-color: currentColor;
+  box-shadow: 16px 0 0 0 currentColor;
+
+ }
+ 
+
+ .header-menu-link.is-current::after{
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: currentColor;
+  border-radius: 2.5px;
+  column-gap: 7px;
+ }
